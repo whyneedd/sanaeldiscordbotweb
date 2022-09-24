@@ -76,6 +76,11 @@ a {
 .navbar__logo-text {
   color: rgb(255, 255, 255);
 }
+@keyframes backcolor {
+  100% {
+    background-position: 0 0;
+  }
+}
 .navbar__item {
   display: inline-block;
   margin: 0 1rem;
@@ -196,7 +201,18 @@ a {
   text-align: center;
 }
 .home__data h2 {
-  font-size: 2rem;
+  font-size: 50px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background-image: linear-gradient(#fff, #fff);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -750px 0;
+  animation-name: backcolor;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: 0.4s;
 }
 .home__btn-container {
   display: inline-block;
